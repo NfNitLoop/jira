@@ -25,7 +25,7 @@ clean:
 	@rm -rf .tox/*-$(PLATFORM) .tox/docs dist/* .tox/dist .tox/log docs/build/*
 
 package:
-	python setup.py sdist bdist_wheel build_sphinx
+	$(PYENV_HOME)/bin/python setup.py sdist bdist_wheel build_sphinx
 
 req:
 	@$(PYENV_HOME)/bin/requires.io update-site -t ac3bbcca32ae03237a6aae2b02eb9411045489bb -r $(PACKAGE_NAME)
